@@ -1,0 +1,96 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F675 ]
+[d frameptr 6 ]
+"62 D:\02_DevTools\MPLABX_XC8_142\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\02_DevTools\MPLABX_XC8_142\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 D:\02_DevTools\MPLABX_XC8_142\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"16 D:\05_Projects\PIC\myProjects\PIC12F675_PWM.X\main.c
+[v _CUS_delay_ms CUS_delay_ms `(v  1 e 1 0 ]
+"31
+[v _initPWM initPWM `(v  1 e 1 0 ]
+"39
+[v _InitADC InitADC `(v  1 e 1 0 ]
+"57
+[v _GetADCValue GetADCValue `(ui  1 e 2 0 ]
+"80
+[v _ISR ISR `II(v  1 e 1 0 ]
+"102
+[v _main main `(v  1 e 1 0 ]
+"70 D:\02_DevTools\MPLABX_XC8_142\include\pic12f675.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"216
+[v _GPIO GPIO `VEuc  1 e 1 @5 ]
+"562
+[v _CMCON CMCON `VEuc  1 e 1 @25 ]
+"621
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"641
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"725
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"795
+[v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
+"1206
+[v _VRCON VRCON `VEuc  1 e 1 @153 ]
+"1382
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"1402
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"1539
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"1545
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @249 ]
+"1547
+[v _GP0 GP0 `VEb  1 e 0 @40 ]
+"1551
+[v _GP2 GP2 `VEb  1 e 0 @42 ]
+"1625
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"1627
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"20 D:\05_Projects\PIC\myProjects\PIC12F675_PWM.X\main.c
+[v _PWM PWM `uc  1 e 1 0 ]
+"21
+[v _ADC ADC `ui  1 e 2 0 ]
+"102
+[v _main main `(v  1 e 1 0 ]
+{
+"133
+} 0
+"31
+[v _initPWM initPWM `(v  1 e 1 0 ]
+{
+"37
+} 0
+"39
+[v _InitADC InitADC `(v  1 e 1 0 ]
+{
+"46
+} 0
+"57
+[v _GetADCValue GetADCValue `(ui  1 e 2 0 ]
+{
+[v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
+[v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
+"59
+[v GetADCValue@Channel Channel `uc  1 a 1 9 ]
+"78
+} 0
+"16
+[v _CUS_delay_ms CUS_delay_ms `(v  1 e 1 0 ]
+{
+[v CUS_delay_ms@i i `ui  1 p 2 4 ]
+"19
+} 0
+"80
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"97
+} 0
