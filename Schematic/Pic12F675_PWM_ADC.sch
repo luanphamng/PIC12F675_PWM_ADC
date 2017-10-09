@@ -1,0 +1,185 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 2SC1815 Q2
+U 1 1 59DB8E4B
+P 5600 3000
+F 0 "Q2" H 5800 3075 50  0000 L CNN
+F 1 "2SC2383" H 5800 3000 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 5800 2925 50  0001 L CIN
+F 3 "" H 5600 3000 50  0001 L CNN
+	1    5600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2SC1815 Q1
+U 1 1 59DB8F24
+P 5050 2650
+F 0 "Q1" H 5250 2725 50  0000 L CNN
+F 1 "2SC1815" H 5250 2650 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 5250 2575 50  0001 L CIN
+F 3 "" H 5050 2650 50  0001 L CNN
+	1    5050 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2850 5150 3000
+Wire Wire Line
+	5150 3000 5400 3000
+$Comp
+L Fan M1
+U 1 1 59DB9057
+P 5700 2100
+F 0 "M1" H 5800 2300 50  0000 L CNN
+F 1 "Fan" H 5800 2000 50  0000 L TNN
+F 2 "" H 5700 2110 50  0001 C CNN
+F 3 "" H 5700 2110 50  0001 C CNN
+	1    5700 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2300 5700 2800
+$Comp
+L D D1
+U 1 1 59DB90EA
+P 6150 2200
+F 0 "D1" H 6150 2300 50  0000 C CNN
+F 1 "D" H 6150 2100 50  0000 C CNN
+F 2 "" H 6150 2200 50  0001 C CNN
+F 3 "" H 6150 2200 50  0001 C CNN
+	1    6150 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 2350 6150 2600
+Wire Wire Line
+	6150 2600 5700 2600
+Connection ~ 5700 2600
+Wire Wire Line
+	6150 1700 6150 2050
+Wire Wire Line
+	5150 1700 6150 1700
+Wire Wire Line
+	5700 1700 5700 1800
+$Comp
+L R R1
+U 1 1 59DB91B8
+P 4550 2650
+F 0 "R1" V 4630 2650 50  0000 C CNN
+F 1 "R" V 4550 2650 50  0000 C CNN
+F 2 "" V 4480 2650 50  0001 C CNN
+F 3 "" H 4550 2650 50  0001 C CNN
+	1    4550 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 2650 4850 2650
+Wire Wire Line
+	4400 2650 4150 2650
+$Comp
+L GND #PWR1
+U 1 1 59DB92D3
+P 5700 3450
+F 0 "#PWR1" H 5700 3200 50  0001 C CNN
+F 1 "GND" H 5700 3300 50  0000 C CNN
+F 2 "" H 5700 3450 50  0001 C CNN
+F 3 "" H 5700 3450 50  0001 C CNN
+	1    5700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3200 5700 3450
+$Comp
+L R R2
+U 1 1 59DB9367
+P 5150 2050
+F 0 "R2" V 5230 2050 50  0000 C CNN
+F 1 "R" V 5150 2050 50  0000 C CNN
+F 2 "" V 5080 2050 50  0001 C CNN
+F 3 "" H 5150 2050 50  0001 C CNN
+	1    5150 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1900 5150 1700
+Connection ~ 5700 1700
+Wire Wire Line
+	5150 2200 5150 2450
+$Comp
+L D D3
+U 1 1 59DB9463
+P 5400 2350
+F 0 "D3" H 5400 2450 50  0000 C CNN
+F 1 "D" H 5400 2250 50  0000 C CNN
+F 2 "" H 5400 2350 50  0001 C CNN
+F 3 "" H 5400 2350 50  0001 C CNN
+	1    5400 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D2
+U 1 1 59DB94E0
+P 4950 2350
+F 0 "D2" H 4950 2450 50  0000 C CNN
+F 1 "D" H 4950 2250 50  0000 C CNN
+F 2 "" H 4950 2350 50  0001 C CNN
+F 3 "" H 4950 2350 50  0001 C CNN
+	1    4950 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5100 2350 5250 2350
+Wire Wire Line
+	5550 2350 5700 2350
+Connection ~ 5700 2350
+Wire Wire Line
+	4800 2350 4750 2350
+Wire Wire Line
+	4750 2350 4750 2650
+Connection ~ 4750 2650
+$EndSCHEMATC
