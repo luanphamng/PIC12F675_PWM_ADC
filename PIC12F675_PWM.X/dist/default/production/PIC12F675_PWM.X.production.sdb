@@ -11,7 +11,7 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"16 D:\05_Projects\PIC\myProjects\PIC12F675_PWM.X\main.c
+"16 D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
 [v _CUS_delay_ms CUS_delay_ms `(v  1 e 1 0 ]
 "31
 [v _initPWM initPWM `(v  1 e 1 0 ]
@@ -55,7 +55,7 @@
 [v _T0IE T0IE `VEb  1 e 0 @93 ]
 "1627
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
-"20 D:\05_Projects\PIC\myProjects\PIC12F675_PWM.X\main.c
+"20 D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
 [v _PWM PWM `uc  1 e 1 0 ]
 "21
 [v _ADC ADC `ui  1 e 2 0 ]

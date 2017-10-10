@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\02_DevTools\MPLABX_XC8_142\dat\en_msgs.txt -cs \
   -h+dist/default/production\PIC12F675_PWM.X.production.sym \
   --cmf=dist/default/production\PIC12F675_PWM.X.production.cmf -z -Q12F675 \
-  -oC:\Users\Liam\AppData\Local\Temp\sfpg.2 \
+  -oC:\Users\Liam\AppData\Local\Temp\s8uo.2 \
   -Mdist/default/production/PIC12F675_PWM.X.production.map -E1 -ver=XC8 \
   -ASTACK=02Eh-05dh -pstack=STACK -ACODE=00h-03FEh -ASTRCODE=00h-03FEh \
   -ASTRING=00h-0FFhx3,0300h-03FEh -ACONST=00h-0FFhx3,0300h-03FEh \
@@ -16,7 +16,7 @@ Linker command line:
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-07Fh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -posccal=03FFh -DCODE=2 -DSTRCODE=2 \
   -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Liam\AppData\Local\Temp\sfpg.obj \
+  C:\Users\Liam\AppData\Local\Temp\s8uo.obj \
   dist/default/production\PIC12F675_PWM.X.production.obj 
 
 Object code version is 3.11
@@ -26,7 +26,7 @@ Machine type is 12F675
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Liam\AppData\Local\Temp\sfpg.obj
+C:\Users\Liam\AppData\Local\Temp\s8uo.obj
                 end_init                              F        F        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             2007     2007        1     400E       0
