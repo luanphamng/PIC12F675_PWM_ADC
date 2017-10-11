@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=R2 Old Footprint=R1/4W New Footprint=0805
+Change Component Footprint: Designator=R3 Old Footprint=R1/4W New Footprint=0805
+Change Component Footprint: Designator=R4 Old Footprint=R1/4W New Footprint=0805
+Added Room: Name=PIC12F675_ADC_PWM

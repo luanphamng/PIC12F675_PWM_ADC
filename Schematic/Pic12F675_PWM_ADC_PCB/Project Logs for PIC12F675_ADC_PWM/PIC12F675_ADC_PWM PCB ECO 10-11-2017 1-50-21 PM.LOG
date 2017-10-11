@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=9V Pin=P1-1
+Removed Pin From Net: NetName=NetC5_2 Pin=P1-2
+Removed Member From Class: ClassName=PIC12F675_ADC_PWM Member=P1
+Added Component: Designator=JP2(CON2)
+Added Pin To Net: NetName=9V Pin=JP2-1
+Added Pin To Net: NetName=NetC5_2 Pin=JP2-2
+Added Member To Class: ClassName=PIC12F675_ADC_PWM Member=Component JP2
+Added Room: Name=PIC12F675_ADC_PWM

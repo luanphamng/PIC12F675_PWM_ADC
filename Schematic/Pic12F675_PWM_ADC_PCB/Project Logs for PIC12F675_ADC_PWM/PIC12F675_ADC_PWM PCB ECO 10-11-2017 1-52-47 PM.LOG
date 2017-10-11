@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=D1 Old Footprint=diode New Footprint=DIODE/NOM/0.5A
+Added Room: Name=PIC12F675_ADC_PWM

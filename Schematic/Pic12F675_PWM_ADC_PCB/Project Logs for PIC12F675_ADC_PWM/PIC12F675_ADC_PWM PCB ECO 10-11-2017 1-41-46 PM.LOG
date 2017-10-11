@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=VR1 Old Footprint=RVAR10K New Footprint=VR
+Added Room: Name=PIC12F675_ADC_PWM
