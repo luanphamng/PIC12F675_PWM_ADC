@@ -20,7 +20,7 @@ void CUS_delay_ms(unsigned int i)
 unsigned char PWM = 0;
 unsigned int ADC = 0;
 // CONFIG
-#pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN)
+#pragma config FOSC = INTOSCCLK        // Oscillator Selection bits (XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
 #pragma config PWRTE = OFF      // Power-Up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // GP3/MCLR pin function select (GP3/MCLR pin function is digital I/O, MCLR internally tied to VDD)
@@ -120,14 +120,18 @@ void main()
 	while(1)
 	{
         ADC = GetADCValue(1);
-        if(ADC)
+//        if(ADC)
+//        {
+//            PWM = (unsigned char) ADC & 0xFF;
+//        }
+//        else
         {
-            PWM = (unsigned char) ADC & 0xFF;
+            //PWM = 1;
         }
-        else
-        {
-            PWM = 50;
-        }
-        CUS_delay_ms(200);
+        GP2 = 0;
+        CUS_delay_ms(1000);
+        GP2 = 1;
+        CUS_delay_ms(1000);
+        PWM++;
 	}
 }

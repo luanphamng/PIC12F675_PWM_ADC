@@ -837,7 +837,7 @@ while(i--);
 unsigned char PWM = 0;
 unsigned int ADC = 0;
 
-#pragma config FOSC = XT
+#pragma config FOSC = INTOSCCLK
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
@@ -929,14 +929,15 @@ PWM = 50;
 while(1)
 {
 ADC = GetADCValue(1);
-if(ADC)
+
+# 128
 {
-PWM = (unsigned char) ADC & 0xFF;
+
 }
-else
-{
-PWM = 50;
-}
-CUS_delay_ms(200);
+GP2 = 0;
+CUS_delay_ms(1000);
+GP2 = 1;
+CUS_delay_ms(1000);
+PWM++;
 }
 }
