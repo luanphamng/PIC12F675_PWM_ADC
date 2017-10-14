@@ -3,21 +3,21 @@
 [d edition pro ]
 [d chip 12F683 ]
 [d frameptr 6 ]
-"62 D:\02_Programs\01_ToolsForDev\Microchip\xc8\v1.38\sources\common\float.c
+"62 /usr/microchip/xc8/v1.43/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 D:\02_Programs\01_ToolsForDev\Microchip\xc8\v1.38\sources\common\ftadd.c
+"86 /usr/microchip/xc8/v1.43/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"4 D:\02_Programs\01_ToolsForDev\Microchip\xc8\v1.38\sources\common\Umul8.c
-[v ___bmul __bmul `(uc  1 e 1 0 ]
-"6 D:\02_Programs\01_ToolsForDev\Microchip\xc8\v1.38\sources\pic\eeprom.c
+"6 /usr/microchip/xc8/v1.43/sources/pic/eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"56 D:\GoogleDrive\10_Projects\02_Embedded\PIC12F675_PWM_ADC\PIC12F675_PWM.X\delay.c
+"56 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
 [v _DELAY_us DELAY_us `(v  1 e 1 0 ]
 "75
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
-"31 D:\GoogleDrive\10_Projects\02_Embedded\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
+"102
+[v _DELAY_sec DELAY_sec `(v  1 e 1 0 ]
+"31 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 [v _initPWM initPWM `(v  1 e 1 0 ]
 "39
 [v _InitADC InitADC `(v  1 e 1 0 ]
@@ -27,39 +27,39 @@
 [v _ISR ISR `II(v  1 e 1 0 ]
 "110
 [v _main main `(v  1 e 1 0 ]
-"68 D:\02_Programs\01_ToolsForDev\Microchip\xc8\v1.38\include\pic12f675.h
+"70 /usr/microchip/xc8/v1.43/include/pic12f675.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
-"212
+"216
 [v _GPIO GPIO `VEuc  1 e 1 @5 ]
-"550
+"562
 [v _CMCON CMCON `VEuc  1 e 1 @25 ]
-"608
+"621
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-"627
+"641
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-"710
+"725
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
-"779
+"795
 [v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
-"1184
+"1206
 [v _VRCON VRCON `VEuc  1 e 1 @153 ]
-"1355
+"1382
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
-"1374
+"1402
 [v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
-"1511
+"1539
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"1517
+"1545
 [v _GO_nDONE GO_nDONE `VEb  1 e 0 @249 ]
-"1519
+"1547
 [v _GP0 GP0 `VEb  1 e 0 @40 ]
-"1523
+"1551
 [v _GP2 GP2 `VEb  1 e 0 @42 ]
-"1597
+"1625
 [v _T0IE T0IE `VEb  1 e 0 @93 ]
-"1599
+"1627
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
-"17 D:\GoogleDrive\10_Projects\02_Embedded\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
+"17 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 [v _PWM PWM `uc  1 e 1 0 ]
 "18
 [v _cycle cycle `uc  1 e 1 0 ]
@@ -68,29 +68,14 @@
 "110
 [v _main main `(v  1 e 1 0 ]
 {
-"125
-[v main@i i `uc  1 a 1 7 ]
-"157
+"177
 } 0
 "31
 [v _initPWM initPWM `(v  1 e 1 0 ]
 {
 "37
 } 0
-"4 D:\02_Programs\01_ToolsForDev\Microchip\xc8\v1.38\sources\common\Umul8.c
-[v ___bmul __bmul `(uc  1 e 1 0 ]
-{
-[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-"6
-[v ___bmul@product product `uc  1 a 1 1 ]
-"4
-[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 5 ]
-"6
-[v ___bmul@multiplier multiplier `uc  1 a 1 2 ]
-"51
-} 0
-"39 D:\GoogleDrive\10_Projects\02_Embedded\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
+"39
 [v _InitADC InitADC `(v  1 e 1 0 ]
 {
 "46
@@ -101,10 +86,16 @@
 [v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
 [v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
 "59
-[v GetADCValue@Channel Channel `uc  1 a 1 4 ]
+[v GetADCValue@Channel Channel `uc  1 a 1 5 ]
 "78
 } 0
-"75 D:\GoogleDrive\10_Projects\02_Embedded\PIC12F675_PWM_ADC\PIC12F675_PWM.X\delay.c
+"102 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+[v _DELAY_sec DELAY_sec `(v  1 e 1 0 ]
+{
+[v DELAY_sec@sec_count sec_count `ui  1 p 2 4 ]
+"108
+} 0
+"75
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
 {
 [v DELAY_ms@ms_count ms_count `ui  1 p 2 2 ]
@@ -116,7 +107,7 @@
 [v DELAY_us@us_count us_count `ui  1 p 2 0 ]
 "62
 } 0
-"80 D:\GoogleDrive\10_Projects\02_Embedded\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
+"80 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
 "105

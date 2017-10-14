@@ -76,9 +76,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;delay.c: 78: {
 "78
 {
-[; ;delay.c: 79: DELAY_us(300u);
+[; ;delay.c: 79: DELAY_us(125);
 "79
-[e ( _DELAY_us (1 -> 300 `ui ]
+[e ( _DELAY_us (1 -> -> 125 `i `ui ]
 [; ;delay.c: 80: ms_count--;
 "80
 [e -- _ms_count -> -> 1 `i `ui ]

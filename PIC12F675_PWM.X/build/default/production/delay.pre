@@ -54,7 +54,7 @@ void DELAY_ms(uint16_t ms_count)
 {
 while (ms_count != 0)
 {
-DELAY_us(300u);
+DELAY_us(125);
 ms_count--;
 }
 }

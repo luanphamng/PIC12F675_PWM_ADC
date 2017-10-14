@@ -76,7 +76,7 @@ void DELAY_ms(uint16_t ms_count)
 {
     while (ms_count != 0) 
     {
-        DELAY_us(C_CountForOneMsDelay_U16); //DELAY_us is called to generate 1ms delay
+        DELAY_us(125); //DELAY_us is called to generate 1ms delay
         ms_count--;
     }
 }
