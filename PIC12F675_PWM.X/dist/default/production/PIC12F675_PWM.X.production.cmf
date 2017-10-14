@@ -11,49 +11,53 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Liam\AppData\Local\Temp\s418.obj
+$/tmp/xcXiHfaV2.obj
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 F F 1 2
 config CONFIG 0 2007 2007 1 2
-$dist/default/production\PIC12F675_PWM.X.production.obj
-cinit CODE 0 10 10 2 2
-text1 CODE 0 A3 A3 8 2
-text2 CODE 0 98 98 B 2
-text3 CODE 0 42 42 30 2
-text4 CODE 0 8B 8B D 2
-text5 CODE 0 72 72 19 2
-nvCOMMON COMMON 1 77 77 3 1
-maintext CODE 0 12 12 30 2
-cstackCOMMON COMMON 1 70 70 7 1
-cstackBANK0 BANK0 1 20 20 4 1
+$dist/default/production/PIC12F675_PWM.X.production.obj
+cinit CODE 0 10 10 5 2
+text1 CODE 0 112 112 8 2
+text2 CODE 0 B3 B3 22 2
+text3 CODE 0 E8 E8 12 2
+text4 CODE 0 107 107 B 2
+text5 CODE 0 5D 5D 30 2
+text6 CODE 0 D5 D5 13 2
+text7 CODE 0 FA FA D 2
+text8 CODE 0 8D 8D 26 2
+nvBANK0 BANK0 1 2B 2B 3 1
+maintext CODE 0 15 15 48 2
+cstackCOMMON COMMON 1 70 70 6 1
+cstackBANK0 BANK0 1 20 20 B 1
 intentry CODE 0 4 4 B 2
-swtext1 CONST 0 AB AB 4 2
+swtext1 CONST 0 11A 11A 4 2
+bssCOMMON COMMON 1 76 76 3 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 24-6F 1
+RAM 2E-6F 1
 RAM A0-BF 1
-BANK0 24-6F 1
+BANK0 2E-6F 1
 BANK1 A0-BF 1
 CONST 1-3 2
-CONST AF-7FF 2
+CONST 11E-7FF 2
 ENTRY 1-3 2
-ENTRY AF-7FF 2
+ENTRY 11E-7FF 2
 IDLOC 2000-2003 2
-STACK 24-6F 1
+STACK 2E-6F 1
 CODE 1-3 2
-CODE AF-7FF 2
+CODE 11E-7FF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
-COMMON 7A-7D 1
+COMMON 79-7D 1
 EEDATA 2100-21FF 2
 STRCODE 1-3 2
-STRCODE AF-7FF 2
+STRCODE 11E-7FF 2
 STRING 1-3 2
-STRING AF-7FF 2
+STRING 11E-7FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -67,69 +71,97 @@ STRING AF-7FF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/default/production\PIC12F675_PWM.X.production.obj
-10 cinit CODE >160:C:\Users\Liam\AppData\Local\Temp\s418.
-10 cinit CODE >163:C:\Users\Liam\AppData\Local\Temp\s418.
-10 cinit CODE >169:C:\Users\Liam\AppData\Local\Temp\s418.
-10 cinit CODE >171:C:\Users\Liam\AppData\Local\Temp\s418.
-11 cinit CODE >172:C:\Users\Liam\AppData\Local\Temp\s418.
-4 intentry CODE >80:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-72 text5 CODE >80:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-72 text5 CODE >82:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-74 text5 CODE >84:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-76 text5 CODE >86:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-78 text5 CODE >87:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-79 text5 CODE >88:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-7A text5 CODE >91:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-7E text5 CODE >92:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-7F text5 CODE >95:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-80 text5 CODE >97:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-8B text4 CODE >16:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-8B text4 CODE >18:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-AB swtext1 CONST >61:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-42 text3 CODE >57:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-44 text3 CODE >59:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-48 text3 CODE >61:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-49 text3 CODE >63:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-4B text3 CODE >64:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-4D text3 CODE >65:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-4F text3 CODE >66:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-54 text3 CODE >68:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-57 text3 CODE >61:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-62 text3 CODE >71:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-67 text3 CODE >73:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-69 text3 CODE >75:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-6B text3 CODE >77:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-98 text2 CODE >39:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-98 text2 CODE >41:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-9A text2 CODE >42:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-9B text2 CODE >43:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-9E text2 CODE >44:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-A0 text2 CODE >45:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-A2 text2 CODE >46:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-A3 text1 CODE >31:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-A3 text1 CODE >33:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-A8 text1 CODE >35:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-A9 text1 CODE >36:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-AA text1 CODE >37:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-12 maintext CODE >102:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-12 maintext CODE >104:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-14 maintext CODE >105:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-16 maintext CODE >106:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-18 maintext CODE >107:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-1A maintext CODE >108:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-1C maintext CODE >109:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-1E maintext CODE >111:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-1F maintext CODE >112:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-21 maintext CODE >114:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-23 maintext CODE >118:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-28 maintext CODE >122:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-2F maintext CODE >131:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-30 maintext CODE >132:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-35 maintext CODE >133:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-37 maintext CODE >134:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-3C maintext CODE >135:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
-41 maintext CODE >120:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
+$dist/default/production/PIC12F675_PWM.X.production.obj
+10 cinit CODE >164:/tmp/xcX59sy8R
+10 cinit CODE >167:/tmp/xcX59sy8R
+10 cinit CODE >181:/tmp/xcX59sy8R
+11 cinit CODE >182:/tmp/xcX59sy8R
+12 cinit CODE >183:/tmp/xcX59sy8R
+13 cinit CODE >189:/tmp/xcX59sy8R
+13 cinit CODE >191:/tmp/xcX59sy8R
+14 cinit CODE >192:/tmp/xcX59sy8R
+4 intentry CODE >79:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+8D text8 CODE >79:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+8D text8 CODE >81:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+91 text8 CODE >82:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+93 text8 CODE >84:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+95 text8 CODE >86:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+97 text8 CODE >87:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+9B text8 CODE >89:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+9D text8 CODE >95:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+A1 text8 CODE >96:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+A5 text8 CODE >98:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+A6 text8 CODE >99:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+A7 text8 CODE >102:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+A8 text8 CODE >104:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+FA text7 CODE >56:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+FA text7 CODE >58:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+FF text7 CODE >60:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+106 text7 CODE >58:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+D5 text6 CODE >75:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+D5 text6 CODE >77:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+DA text6 CODE >79:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+E0 text6 CODE >80:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+E7 text6 CODE >77:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
+11A swtext1 CONST >60:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+5D text5 CODE >56:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+5F text5 CODE >58:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+63 text5 CODE >60:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+64 text5 CODE >62:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+66 text5 CODE >63:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+68 text5 CODE >64:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+6A text5 CODE >65:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+6F text5 CODE >67:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+72 text5 CODE >60:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+7D text5 CODE >70:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+82 text5 CODE >72:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+84 text5 CODE >74:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+86 text5 CODE >76:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+107 text4 CODE >38:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+107 text4 CODE >40:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+109 text4 CODE >41:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+10A text4 CODE >42:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+10D text4 CODE >43:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+10F text4 CODE >44:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+111 text4 CODE >45:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+E8 text3 CODE >4:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+EA text3 CODE >6:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+EB text3 CODE >43:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+ED text3 CODE >44:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+F1 text3 CODE >45:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+F3 text3 CODE >46:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+F5 text3 CODE >47:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+F8 text3 CODE >50:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+B3 text2 CODE >15:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+B3 text2 CODE >43:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+B6 text2 CODE >45:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+B8 text2 CODE >46:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+BE text2 CODE >47:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+C5 text2 CODE >48:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+CC text2 CODE >49:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+D0 text2 CODE >52:/usr/microchip/xc8/v1.43/sources/common/Umul16.c
+112 text1 CODE >30:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+112 text1 CODE >32:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+117 text1 CODE >34:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+118 text1 CODE >35:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+119 text1 CODE >36:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+15 maintext CODE >109:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+15 maintext CODE >111:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+17 maintext CODE >112:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+19 maintext CODE >113:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+1B maintext CODE >114:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+1D maintext CODE >115:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+1F maintext CODE >116:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+21 maintext CODE >118:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+22 maintext CODE >119:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+24 maintext CODE >121:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+26 maintext CODE >127:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+2B maintext CODE >131:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+32 maintext CODE >141:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+3A maintext CODE >143:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+44 maintext CODE >144:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+53 maintext CODE >141:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+5C maintext CODE >146:/media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -142,58 +174,70 @@ AA text1 CODE >37:D:\05_Projects\PIC12F675_PWM_ADC\PIC12F675_PWM.X\main.c
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___latbits 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
+___latbits 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
 __Hspace_0 2008 0 ABS 0 - -
-__Hspace_1 7A 0 ABS 0 - -
+__Hspace_1 79 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+main@i 2A 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
-_GPIO 5 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_T0IE 5D 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_T0IF 5A 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_TMR0 1 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Liam\AppData\Local\Temp\s418.obj
-_main 24 0 CODE 0 maintext dist/default/production\PIC12F675_PWM.X.production.obj
-btemp 7E 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-start 1E 0 CODE 0 init C:\Users\Liam\AppData\Local\Temp\s418.obj
-__size_of_main 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
+_GPIO 5 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_T0IE 5D 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_T0IF 5A 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_TMR0 1 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcXiHfaV2.obj
+_main 2A 0 CODE 0 maintext dist/default/production/PIC12F675_PWM.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+start 1E 0 CODE 0 init /tmp/xcXiHfaV2.obj
+__size_of_main 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+?___wmul 20 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-__LnvCOMMON 0 0 ABS 0 nvCOMMON -
-intlevel0 0 0 CODE 0 functab C:\Users\Liam\AppData\Local\Temp\s418.obj
-intlevel1 0 0 CODE 0 functab C:\Users\Liam\AppData\Local\Temp\s418.obj
-intlevel2 0 0 CODE 0 functab C:\Users\Liam\AppData\Local\Temp\s418.obj
-intlevel3 0 0 CODE 0 functab C:\Users\Liam\AppData\Local\Temp\s418.obj
-intlevel4 0 0 CODE 0 functab C:\Users\Liam\AppData\Local\Temp\s418.obj
-intlevel5 0 0 CODE 0 functab C:\Users\Liam\AppData\Local\Temp\s418.obj
-_InitADC 130 0 CODE 0 text2 dist/default/production\PIC12F675_PWM.X.production.obj
-wtemp0 7E 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__Hfunctab 0 0 CODE 0 functab -
-GetADCValue@Channel 22 0 BANK0 1 cstackBANK0 dist/default/production\PIC12F675_PWM.X.production.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXiHfaV2.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXiHfaV2.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXiHfaV2.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXiHfaV2.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXiHfaV2.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXiHfaV2.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+_InitADC 20E 0 CODE 0 text4 dist/default/production/PIC12F675_PWM.X.production.obj
+___bmul@multiplicand 75 0 COMMON 1 cstackCOMMON dist/default/production/PIC12F675_PWM.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+GetADCValue@Channel 24 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
-_CUS_delay_ms 116 0 CODE 0 text4 dist/default/production\PIC12F675_PWM.X.production.obj
-_ADCON0 1F 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_ADRESH 1E 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_ADRESL 9E 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__size_of_initPWM 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
+___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+_ADCON0 1F 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_ADRESH 1E 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_ADRESL 9E 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__size_of_initPWM 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of___bmul 1F4 0 CODE 0 text3 dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of___wmul 1AA 0 CODE 0 text2 dist/default/production/PIC12F675_PWM.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
-_OPTION_REG 81 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__size_of_CUS_delay_ms 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__HnvCOMMON 0 0 ABS 0 nvCOMMON -
-__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-start_initialization 20 0 CODE 0 cinit dist/default/production\PIC12F675_PWM.X.production.obj
-__end_of_CUS_delay_ms 130 0 CODE 0 text4 dist/default/production\PIC12F675_PWM.X.production.obj
-__end_of_GetADCValue E4 0 CODE 0 text3 dist/default/production\PIC12F675_PWM.X.production.obj
-_GO_nDONE F9 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\PIC12F675_PWM.X.production.obj
-_TRISIO 85 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__end_of_initPWM 156 0 CODE 0 text1 dist/default/production\PIC12F675_PWM.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\Liam\AppData\Local\Temp\s418.obj
+__LnvBANK0 0 0 ABS 0 nvBANK0 -
+___bmul@multiplier 22 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+__size_of_DELAY_ms 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__size_of_DELAY_us 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_OPTION_REG 81 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+start_initialization 20 0 CODE 0 cinit dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of_GetADCValue 11A 0 CODE 0 text5 dist/default/production/PIC12F675_PWM.X.production.obj
+_GO_nDONE F9 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+_TRISIO 85 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+DELAY_us@us_count 20 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+_DELAY_ms 1AA 0 CODE 0 text6 dist/default/production/PIC12F675_PWM.X.production.obj
+_DELAY_us 1F4 0 CODE 0 text7 dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of_initPWM 234 0 CODE 0 text1 dist/default/production/PIC12F675_PWM.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXiHfaV2.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
-__Hcinit 24 0 CODE 0 cinit -
+__Hcinit 2A 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
+__end_of_DELAY_ms 1D0 0 CODE 0 text6 dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of_DELAY_us 20E 0 CODE 0 text7 dist/default/production/PIC12F675_PWM.X.production.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 0 config -
@@ -214,76 +258,89 @@ __Linit 1E 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Ltext 0 0 ABS 0 text -
+__pnvBANK0 2B 0 BANK0 1 nvBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+___bmul 1D0 0 CODE 0 text3 dist/default/production/PIC12F675_PWM.X.production.obj
+___wmul 166 0 CODE 0 text2 dist/default/production/PIC12F675_PWM.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_ADC 77 0 COMMON 1 nvCOMMON dist/default/production\PIC12F675_PWM.X.production.obj
-_GIE 5F 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_GP0 28 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_GP2 2A 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_ISR E4 0 CODE 0 text5 dist/default/production\PIC12F675_PWM.X.production.obj
-_PWM 79 0 COMMON 1 nvCOMMON dist/default/production\PIC12F675_PWM.X.production.obj
+_GIE 5F 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_GP0 28 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_GP2 2A 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_ISR 11A 0 CODE 0 text8 dist/default/production/PIC12F675_PWM.X.production.obj
+_PWM 2D 0 BANK0 1 nvBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
 __S0 2008 0 ABS 0 - -
-__S1 7A 0 ABS 0 - -
+__S1 79 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__pnvCOMMON 77 0 COMMON 1 nvCOMMON dist/default/production\PIC12F675_PWM.X.production.obj
-saved_w 7E 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__end_of_ISR 116 0 CODE 0 text5 dist/default/production\PIC12F675_PWM.X.production.obj
-__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
+saved_w 7E 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of_ISR 166 0 CODE 0 text8 dist/default/production/PIC12F675_PWM.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-?_GetADCValue 20 0 BANK0 1 cstackBANK0 dist/default/production\PIC12F675_PWM.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Liam\AppData\Local\Temp\s418.obj
-__size_of_InitADC 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__size_of_GetADCValue 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__pmaintext 24 0 CODE 0 maintext dist/default/production\PIC12F675_PWM.X.production.obj
+?_GetADCValue 22 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXiHfaV2.obj
+__size_of___bmul 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__size_of_InitADC 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__size_of_GetADCValue 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__pmaintext 2A 0 CODE 0 maintext dist/default/production/PIC12F675_PWM.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
-__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-stackhi 0 0 ABS 0 - C:\Users\Liam\AppData\Local\Temp\s418.obj
-stacklo 0 0 ABS 0 - C:\Users\Liam\AppData\Local\Temp\s418.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+___wmul@multiplier 20 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+stackhi 0 0 ABS 0 - /tmp/xcXiHfaV2.obj
+stacklo 0 0 ABS 0 - /tmp/xcXiHfaV2.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 76 0 COMMON 1 bssCOMMON dist/default/production/PIC12F675_PWM.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 1E 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__CFG_FOSC$INTOSCCLK 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-end_of_initialization 20 0 CODE 0 cinit dist/default/production\PIC12F675_PWM.X.production.obj
+end_of_initialization 26 0 CODE 0 cinit dist/default/production/PIC12F675_PWM.X.production.obj
 __Hintentry 1E 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 2 0 CODE 0 reset_vec -
-_initPWM 146 0 CODE 0 text1 dist/default/production\PIC12F675_PWM.X.production.obj
-CUS_delay_ms@i 74 0 COMMON 1 cstackCOMMON dist/default/production\PIC12F675_PWM.X.production.obj
-__ptext1 146 0 CODE 0 text1 dist/default/production\PIC12F675_PWM.X.production.obj
-__ptext2 130 0 CODE 0 text2 dist/default/production\PIC12F675_PWM.X.production.obj
-__ptext3 84 0 CODE 0 text3 dist/default/production\PIC12F675_PWM.X.production.obj
-__ptext4 116 0 CODE 0 text4 dist/default/production\PIC12F675_PWM.X.production.obj
-__ptext5 E4 0 CODE 0 text5 dist/default/production\PIC12F675_PWM.X.production.obj
-__end_of_InitADC 146 0 CODE 0 text2 dist/default/production\PIC12F675_PWM.X.production.obj
+_initPWM 224 0 CODE 0 text1 dist/default/production/PIC12F675_PWM.X.production.obj
+_StartTime 2B 0 BANK0 1 nvBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext1 224 0 CODE 0 text1 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext2 166 0 CODE 0 text2 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext3 1D0 0 CODE 0 text3 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext4 20E 0 CODE 0 text4 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext5 BA 0 CODE 0 text5 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext6 1AA 0 CODE 0 text6 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext7 1F4 0 CODE 0 text7 dist/default/production/PIC12F675_PWM.X.production.obj
+__ptext8 11A 0 CODE 0 text8 dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of_InitADC 224 0 CODE 0 text4 dist/default/production/PIC12F675_PWM.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 20 0 CODE 0 cinit dist/default/production\PIC12F675_PWM.X.production.obj
-__Lfunctab 0 0 CODE 0 functab -
+__CFG_FOSC$XT 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+DELAY_ms@ms_count 26 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+__end_of__initialization 26 0 CODE 0 cinit dist/default/production/PIC12F675_PWM.X.production.obj
+__Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\PIC12F675_PWM.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC12F675_PWM.X.production.obj
 __Hend_init 20 0 CODE 0 end_init -
-__end_of_main 84 0 CODE 0 maintext dist/default/production\PIC12F675_PWM.X.production.obj
-_ANSEL 9F 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_CMCON 19 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_VRCON 99 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
+__end_of_main BA 0 CODE 0 maintext dist/default/production/PIC12F675_PWM.X.production.obj
+_ANSEL 9F 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_CMCON 19 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_VRCON 99 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-interrupt_function 8 0 CODE 0 intentry dist/default/production\PIC12F675_PWM.X.production.obj
-__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__pintentry 8 0 CODE 0 intentry dist/default/production\PIC12F675_PWM.X.production.obj
-__size_of_ISR 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-_GetADCValue 84 0 CODE 0 text3 dist/default/production\PIC12F675_PWM.X.production.obj
-__initialization 20 0 CODE 0 cinit dist/default/production\PIC12F675_PWM.X.production.obj
-__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\PIC12F675_PWM.X.production.obj
-__pswtext1 156 0 CONST 0 swtext1 dist/default/production\PIC12F675_PWM.X.production.obj
+interrupt_function 8 0 CODE 0 intentry dist/default/production/PIC12F675_PWM.X.production.obj
+_cycle 78 0 COMMON 1 bssCOMMON dist/default/production/PIC12F675_PWM.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production/PIC12F675_PWM.X.production.obj
+__size_of_ISR 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+_GetADCValue BA 0 CODE 0 text5 dist/default/production/PIC12F675_PWM.X.production.obj
+__initialization 20 0 CODE 0 cinit dist/default/production/PIC12F675_PWM.X.production.obj
+___bmul@product 21 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/PIC12F675_PWM.X.production.obj
+___wmul@product 24 0 BANK0 1 cstackBANK0 dist/default/production/PIC12F675_PWM.X.production.obj
+__pswtext1 234 0 CONST 0 swtext1 dist/default/production/PIC12F675_PWM.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -309,9 +366,9 @@ __pswtext1 156 0 CONST 0 swtext1 dist/default/production\PIC12F675_PWM.X.product
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackCOMMON 1 70 70 A 1
-cstackBANK0 1 20 20 4 1
-intentry 0 4 8 A7 2
+cstackCOMMON 1 70 70 9 1
+cstackBANK0 1 20 20 E 1
+intentry 0 4 8 116 2
 reset_vec 0 0 0 1 2
-swtext1 0 AB 156 4 2
+swtext1 0 11A 234 4 2
 config 0 2007 400E 1 2

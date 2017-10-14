@@ -8,19 +8,18 @@
 
 //#include <xc.h>
 #include <pic12f675.h>
-//#include "delay.h"
+#include "delay.h"
 
 #define PWM_Pin    GP0
-#define _XTAL_FREQ   4000000  
+#define _XTAL_FREQ   8000000  
 
-void CUS_delay_ms(unsigned int i)
-{
-    while(i--);
-}
 unsigned char PWM = 0;
+unsigned char cycle = 0;
 unsigned int ADC = 0;
+unsigned int StartTime;
+
 // CONFIG
-#pragma config FOSC = INTOSCCLK        // Oscillator Selection bits (XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN)
+#pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
 #pragma config PWRTE = OFF      // Power-Up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // GP3/MCLR pin function select (GP3/MCLR pin function is digital I/O, MCLR internally tied to VDD)
@@ -68,7 +67,7 @@ unsigned int GetADCValue(unsigned char Channel)
 		default:	return 0; 					//Return error, wrong channel selected
 	}
     
-    CUS_delay_ms(10);      // Time for Acqusition capacitor to charge up and show correct value
+    DELAY_us(10);      // Time for Acqusition capacitor to charge up and show correct value
 
 	GO_nDONE  = 1;		 // Enable Go/Done
 
@@ -79,19 +78,27 @@ unsigned int GetADCValue(unsigned char Channel)
 
 void interrupt ISR(void)
 {
+    cycle++;
     if(T0IF)
     {
         if(PWM_Pin) // if pin pwm is high
         {
             TMR0 = PWM;
-            PWM_Pin = 0;
+            if(cycle == 10)
+            {
+                PWM_Pin = 0;
+                cycle = 0;
+            }
         }
         else
         {
             TMR0 = 255 - PWM;
-            PWM_Pin = 1;
+            if(cycle == 10)
+            {
+                PWM_Pin = 1;
+                cycle = 0;
+            }
         }
-        
         T0IF = 0; //clear isr
     }
 }
@@ -113,13 +120,15 @@ void main()
     
     InitADC(1);
     
+    // Create variables
+    unsigned char i;
 	// PWM=0 means 0% duty cycle and 
 	// PWM=255 means 100% duty cycle
-	PWM = 50;			 // 50% duty cycle 
+	PWM = 80;			 // 50% duty cycle 
 	
 	while(1)
 	{
-        ADC = GetADCValue(1);
+        StartTime = GetADCValue(1);
 //        if(ADC)
 //        {
 //            PWM = (unsigned char) ADC & 0xFF;
@@ -128,10 +137,20 @@ void main()
         {
             //PWM = 1;
         }
-        GP2 = 0;
-        CUS_delay_ms(1000);
-        GP2 = 1;
-        CUS_delay_ms(1000);
-        PWM++;
+//        StartTime = 20;
+        for(i = 8; i < 21; i++)
+        {
+            PWM = i*10;
+            DELAY_ms(StartTime*10);
+        }
+        while(1);
+//        PWM++;
+//        PWM = 80;			 // 50% duty cycle 
+//        DELAY_sec(5);
+//        
+//        PWM = 200;
+//        DELAY_sec(5);
+
+        
 	}
 }
