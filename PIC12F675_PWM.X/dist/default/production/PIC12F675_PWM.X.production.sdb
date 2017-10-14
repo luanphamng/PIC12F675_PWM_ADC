@@ -7,6 +7,8 @@
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /usr/microchip/xc8/v1.43/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /usr/microchip/xc8/v1.43/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "6 /usr/microchip/xc8/v1.43/sources/pic/eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
@@ -17,15 +19,15 @@
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
 "102
 [v _DELAY_sec DELAY_sec `(v  1 e 1 0 ]
-"31 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+"32 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 [v _initPWM initPWM `(v  1 e 1 0 ]
-"39
+"40
 [v _InitADC InitADC `(v  1 e 1 0 ]
-"57
+"58
 [v _GetADCValue GetADCValue `(ui  1 e 2 0 ]
-"80
+"81
 [v _ISR ISR `II(v  1 e 1 0 ]
-"110
+"111
 [v _main main `(v  1 e 1 0 ]
 "70 /usr/microchip/xc8/v1.43/include/pic12f675.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -59,40 +61,54 @@
 [v _T0IE T0IE `VEb  1 e 0 @93 ]
 "1627
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
-"17 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+"18 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 [v _PWM PWM `uc  1 e 1 0 ]
-"18
+"19
 [v _cycle cycle `uc  1 e 1 0 ]
-"20
+"21
 [v _StartTime StartTime `ui  1 e 2 0 ]
-"110
+"111
 [v _main main `(v  1 e 1 0 ]
 {
-"177
+"126
+[v main@i i `uc  1 a 1 10 ]
+"178
 } 0
-"31
+"32
 [v _initPWM initPWM `(v  1 e 1 0 ]
 {
-"37
+"38
 } 0
-"39
+"6 /usr/microchip/xc8/v1.43/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 4 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"40 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 [v _InitADC InitADC `(v  1 e 1 0 ]
 {
-"46
+"47
 } 0
-"57
+"58
 [v _GetADCValue GetADCValue `(ui  1 e 2 0 ]
 {
 [v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
 [v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
-"59
-[v GetADCValue@Channel Channel `uc  1 a 1 5 ]
-"78
+"60
+[v GetADCValue@Channel Channel `uc  1 a 1 4 ]
+"79
 } 0
 "102 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/delay.c
 [v _DELAY_sec DELAY_sec `(v  1 e 1 0 ]
 {
-[v DELAY_sec@sec_count sec_count `ui  1 p 2 4 ]
+[v DELAY_sec@sec_count sec_count `ui  1 p 2 7 ]
 "108
 } 0
 "75
@@ -107,8 +123,8 @@
 [v DELAY_us@us_count us_count `ui  1 p 2 0 ]
 "62
 } 0
-"80 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
+"81 /media/pml/PMLDATA/05_Projects/PIC12F675_PWM_ADC/PIC12F675_PWM.X/main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"105
+"106
 } 0

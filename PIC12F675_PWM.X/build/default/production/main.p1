@@ -32,11 +32,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "216
 [v _GPIO `Vuc ~T0 @X0 0 e@5 ]
-"1551
-[v _GP2 `Vb ~T0 @X0 0 e@42 ]
 "68 delay.h
 [v _DELAY_ms `(v ~T0 @X0 0 ef1`ui ]
-"69
+"1551 /usr/microchip/xc8/v1.43/include/pic12f675.h
+[v _GP2 `Vb ~T0 @X0 0 e@42 ]
+"69 delay.h
 [v _DELAY_sec `(v ~T0 @X0 0 ef1`ui ]
 [; ;pic12f675.h: 50: extern volatile unsigned char INDF @ 0x000;
 "52 /usr/microchip/xc8/v1.43/include/pic12f675.h
@@ -677,345 +677,361 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;delay.h: 67: void DELAY_us(uint16_t us_count);
 [; ;delay.h: 68: void DELAY_ms(uint16_t ms_count);
 [; ;delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
-"17 main.c
+"18 main.c
 [v _PWM `uc ~T0 @X0 1 e ]
 [i _PWM
 -> -> 0 `i `uc
 ]
-[; ;main.c: 17: unsigned char PWM = 0;
-"18
+[; ;main.c: 18: unsigned char PWM = 0;
+"19
 [v _cycle `uc ~T0 @X0 1 e ]
 [i _cycle
 -> -> 0 `i `uc
 ]
-[; ;main.c: 18: unsigned char cycle = 0;
-"19
+[; ;main.c: 19: unsigned char cycle = 0;
+"20
 [v _ADC `ui ~T0 @X0 1 e ]
 [i _ADC
 -> -> 0 `i `ui
 ]
-[; ;main.c: 19: unsigned int ADC = 0;
-"20
+[; ;main.c: 20: unsigned int ADC = 0;
+"21
 [v _StartTime `ui ~T0 @X0 1 e ]
-[; ;main.c: 20: unsigned int StartTime;
-"23
-[p x FOSC=XT ]
+[; ;main.c: 21: unsigned int StartTime;
 "24
-[p x WDTE=OFF ]
+[p x FOSC=INTOSCCLK ]
 "25
-[p x PWRTE=OFF ]
+[p x WDTE=OFF ]
 "26
-[p x MCLRE=OFF ]
+[p x PWRTE=OFF ]
 "27
-[p x BOREN=ON ]
+[p x MCLRE=OFF ]
 "28
-[p x CP=OFF ]
+[p x BOREN=ON ]
 "29
+[p x CP=OFF ]
+"30
 [p x CPD=OFF ]
-"31
-[v _initPWM `(v ~T0 @X0 1 ef ]
 "32
+[v _initPWM `(v ~T0 @X0 1 ef ]
+"33
 {
-[; ;main.c: 31: void initPWM(void)
-[; ;main.c: 32: {
+[; ;main.c: 32: void initPWM(void)
+[; ;main.c: 33: {
 [e :U _initPWM ]
 [f ]
-[; ;main.c: 33: OPTION_REG &= 0xC0;
-"33
+[; ;main.c: 34: OPTION_REG &= 0xC0;
+"34
 [e =& _OPTION_REG -> -> 192 `i `uc ]
-[; ;main.c: 35: T0IE = 1;
-"35
-[e = _T0IE -> -> 1 `i `b ]
-[; ;main.c: 36: GIE = 1;
+[; ;main.c: 36: T0IE = 1;
 "36
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 37: }
+[e = _T0IE -> -> 1 `i `b ]
+[; ;main.c: 37: GIE = 1;
 "37
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 38: }
+"38
 [e :UE 81 ]
 }
-"39
+"40
 [v _InitADC `(v ~T0 @X0 1 ef1`uc ]
-"40
-{
-[; ;main.c: 39: void InitADC(unsigned char Channel)
-[; ;main.c: 40: {
-[e :U _InitADC ]
-"39
-[v _Channel `uc ~T0 @X0 1 r1 ]
-"40
-[f ]
-[; ;main.c: 41: ANSEL |= 0x02;
 "41
-[e =| _ANSEL -> -> 2 `i `uc ]
-[; ;main.c: 42: TRISIO |= 0x02;
+{
+[; ;main.c: 40: void InitADC(unsigned char Channel)
+[; ;main.c: 41: {
+[e :U _InitADC ]
+"40
+[v _Channel `uc ~T0 @X0 1 r1 ]
+"41
+[f ]
+[; ;main.c: 42: ANSEL |= 0x02;
 "42
-[e =| _TRISIO -> -> 2 `i `uc ]
-[; ;main.c: 43: ADCON0 = 0x81;
+[e =| _ANSEL -> -> 2 `i `uc ]
+[; ;main.c: 43: TRISIO |= 0x02;
 "43
-[e = _ADCON0 -> -> 129 `i `uc ]
-[; ;main.c: 44: CMCON = 0x07;
+[e =| _TRISIO -> -> 2 `i `uc ]
+[; ;main.c: 44: ADCON0 = 0x81;
 "44
-[e = _CMCON -> -> 7 `i `uc ]
-[; ;main.c: 45: VRCON = 0x00;
+[e = _ADCON0 -> -> 129 `i `uc ]
+[; ;main.c: 45: CMCON = 0x07;
 "45
-[e = _VRCON -> -> 0 `i `uc ]
-[; ;main.c: 46: }
+[e = _CMCON -> -> 7 `i `uc ]
+[; ;main.c: 46: VRCON = 0x00;
 "46
+[e = _VRCON -> -> 0 `i `uc ]
+[; ;main.c: 47: }
+"47
 [e :UE 82 ]
 }
-"57
+"58
 [v _GetADCValue `(ui ~T0 @X0 1 ef1`uc ]
-"58
-{
-[; ;main.c: 57: unsigned int GetADCValue(unsigned char Channel)
-[; ;main.c: 58: {
-[e :U _GetADCValue ]
-"57
-[v _Channel `uc ~T0 @X0 1 r1 ]
-"58
-[f ]
-[; ;main.c: 59: ADCON0 &= 0xf3;
 "59
-[e =& _ADCON0 -> -> 243 `i `uc ]
-[; ;main.c: 61: switch(Channel)
-"61
-[e $U 85  ]
-[; ;main.c: 62: {
-"62
 {
-[; ;main.c: 63: case 0: ADCON0 |= 0x00; break;
+[; ;main.c: 58: unsigned int GetADCValue(unsigned char Channel)
+[; ;main.c: 59: {
+[e :U _GetADCValue ]
+"58
+[v _Channel `uc ~T0 @X0 1 r1 ]
+"59
+[f ]
+[; ;main.c: 60: ADCON0 &= 0xf3;
+"60
+[e =& _ADCON0 -> -> 243 `i `uc ]
+[; ;main.c: 62: switch(Channel)
+"62
+[e $U 85  ]
+[; ;main.c: 63: {
 "63
+{
+[; ;main.c: 64: case 0: ADCON0 |= 0x00; break;
+"64
 [e :U 86 ]
 [e =| _ADCON0 -> -> 0 `i `uc ]
 [e $U 84  ]
-[; ;main.c: 64: case 1: ADCON0 |= 0x04; break;
-"64
+[; ;main.c: 65: case 1: ADCON0 |= 0x04; break;
+"65
 [e :U 87 ]
 [e =| _ADCON0 -> -> 4 `i `uc ]
 [e $U 84  ]
-[; ;main.c: 65: case 2: ADCON0 |= 0x08; break;
-"65
+[; ;main.c: 66: case 2: ADCON0 |= 0x08; break;
+"66
 [e :U 88 ]
 [e =| _ADCON0 -> -> 8 `i `uc ]
 [e $U 84  ]
-[; ;main.c: 66: case 3: ADCON0 |= 0x0c; break;
-"66
+[; ;main.c: 67: case 3: ADCON0 |= 0x0c; break;
+"67
 [e :U 89 ]
 [e =| _ADCON0 -> -> 12 `i `uc ]
 [e $U 84  ]
-[; ;main.c: 68: default: return 0;
-"68
+[; ;main.c: 69: default: return 0;
+"69
 [e :U 90 ]
 [e ) -> -> 0 `i `ui ]
 [e $UE 83  ]
-"69
+"70
 }
-[; ;main.c: 69: }
+[; ;main.c: 70: }
 [e $U 84  ]
-"61
+"62
 [e :U 85 ]
 [e [\ _Channel , $ -> -> 0 `i `uc 86
  , $ -> -> 1 `i `uc 87
  , $ -> -> 2 `i `uc 88
  , $ -> -> 3 `i `uc 89
  90 ]
-"69
+"70
 [e :U 84 ]
-[; ;main.c: 71: DELAY_us(10);
-"71
+[; ;main.c: 72: DELAY_us(10);
+"72
 [e ( _DELAY_us (1 -> -> 10 `i `ui ]
-[; ;main.c: 73: GO_nDONE = 1;
-"73
+[; ;main.c: 74: GO_nDONE = 1;
+"74
 [e = _GO_nDONE -> -> 1 `i `b ]
-[; ;main.c: 75: while(GO_nDONE);
-"75
+[; ;main.c: 76: while(GO_nDONE);
+"76
 [e $U 91  ]
 [e :U 92 ]
 [e :U 91 ]
 [e $ _GO_nDONE 92  ]
 [e :U 93 ]
-[; ;main.c: 77: return ((ADRESH<<8)+ADRESL);
-"77
+[; ;main.c: 78: return ((ADRESH<<8)+ADRESL);
+"78
 [e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
 [e $UE 83  ]
-[; ;main.c: 78: }
-"78
+[; ;main.c: 79: }
+"79
 [e :UE 83 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
 [v F675 `(v ~T0 @X0 1 tf ]
-"80
-[v _ISR `IF675 ~T0 @X0 1 e ]
 "81
+[v _ISR `IF675 ~T0 @X0 1 e ]
+"82
 {
-[; ;main.c: 80: void interrupt ISR(void)
-[; ;main.c: 81: {
+[; ;main.c: 81: void interrupt ISR(void)
+[; ;main.c: 82: {
 [e :U _ISR ]
 [f ]
-[; ;main.c: 82: cycle++;
-"82
-[e ++ _cycle -> -> 1 `i `uc ]
-[; ;main.c: 83: if(T0IF)
+[; ;main.c: 83: cycle++;
 "83
-[e $ ! _T0IF 95  ]
-[; ;main.c: 84: {
+[e ++ _cycle -> -> 1 `i `uc ]
+[; ;main.c: 84: if(T0IF)
 "84
-{
-[; ;main.c: 85: if(GP0)
+[e $ ! _T0IF 95  ]
+[; ;main.c: 85: {
 "85
-[e $ ! _GP0 96  ]
-[; ;main.c: 86: {
+{
+[; ;main.c: 86: if(GP0)
 "86
-{
-[; ;main.c: 87: TMR0 = 255 - PWM;
+[e $ ! _GP0 96  ]
+[; ;main.c: 87: {
 "87
-[e = _TMR0 -> - -> 255 `i -> _PWM `i `uc ]
-[; ;main.c: 88: if(cycle == 1)
-"88
-[e $ ! == -> _cycle `i -> 1 `i 97  ]
-[; ;main.c: 89: {
-"89
 {
-[; ;main.c: 90: GP0 = 0;
+[; ;main.c: 88: TMR0 = PWM;
+"88
+[e = _TMR0 _PWM ]
+[; ;main.c: 89: if(cycle == 1)
+"89
+[e $ ! == -> _cycle `i -> 1 `i 97  ]
+[; ;main.c: 90: {
 "90
-[e = _GP0 -> -> 0 `i `b ]
-[; ;main.c: 91: cycle = 0;
+{
+[; ;main.c: 91: GP0 = 0;
 "91
-[e = _cycle -> -> 0 `i `uc ]
+[e = _GP0 -> -> 0 `i `b ]
+[; ;main.c: 92: cycle = 0;
 "92
-}
-[e :U 97 ]
+[e = _cycle -> -> 0 `i `uc ]
 "93
 }
-[; ;main.c: 92: }
-[; ;main.c: 93: }
-[e $U 98  ]
+[e :U 97 ]
 "94
-[e :U 96 ]
-[; ;main.c: 94: else
-[; ;main.c: 95: {
-"95
-{
-[; ;main.c: 96: TMR0 = PWM;
-"96
-[e = _TMR0 _PWM ]
-[; ;main.c: 97: if(cycle == 5)
-"97
-[e $ ! == -> _cycle `i -> 5 `i 99  ]
-[; ;main.c: 98: {
-"98
-{
-[; ;main.c: 99: GP0 = 1;
-"99
-[e = _GP0 -> -> 1 `i `b ]
-[; ;main.c: 100: cycle = 0;
-"100
-[e = _cycle -> -> 0 `i `uc ]
-"101
 }
-[e :U 99 ]
+[; ;main.c: 93: }
+[; ;main.c: 94: }
+[e $U 98  ]
+"95
+[e :U 96 ]
+[; ;main.c: 95: else
+[; ;main.c: 96: {
+"96
+{
+[; ;main.c: 97: TMR0 = 255 - PWM;
+"97
+[e = _TMR0 -> - -> 255 `i -> _PWM `i `uc ]
+[; ;main.c: 98: if(cycle == 1)
+"98
+[e $ ! == -> _cycle `i -> 1 `i 99  ]
+[; ;main.c: 99: {
+"99
+{
+[; ;main.c: 100: GP0 = 1;
+"100
+[e = _GP0 -> -> 1 `i `b ]
+[; ;main.c: 101: cycle = 0;
+"101
+[e = _cycle -> -> 0 `i `uc ]
 "102
 }
-[e :U 98 ]
-[; ;main.c: 101: }
-[; ;main.c: 102: }
-[; ;main.c: 103: T0IF = 0;
+[e :U 99 ]
 "103
-[e = _T0IF -> -> 0 `i `b ]
+}
+[e :U 98 ]
+[; ;main.c: 102: }
+[; ;main.c: 103: }
+[; ;main.c: 104: T0IF = 0;
 "104
+[e = _T0IF -> -> 0 `i `b ]
+"105
 }
 [e :U 95 ]
-[; ;main.c: 104: }
 [; ;main.c: 105: }
-"105
+[; ;main.c: 106: }
+"106
 [e :UE 94 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"110
-[v _main `(v ~T0 @X0 1 ef ]
 "111
+[v _main `(v ~T0 @X0 1 ef ]
+"112
 {
-[; ;main.c: 110: void main()
-[; ;main.c: 111: {
+[; ;main.c: 111: void main()
+[; ;main.c: 112: {
 [e :U _main ]
 [f ]
-[; ;main.c: 112: ANSEL = 0x00;
-"112
-[e = _ANSEL -> -> 0 `i `uc ]
-[; ;main.c: 113: ADCON0 = 0x00;
+[; ;main.c: 113: ANSEL = 0x00;
 "113
-[e = _ADCON0 -> -> 0 `i `uc ]
-[; ;main.c: 114: CMCON = 0x07;
+[e = _ANSEL -> -> 0 `i `uc ]
+[; ;main.c: 114: ADCON0 = 0x00;
 "114
-[e = _CMCON -> -> 7 `i `uc ]
-[; ;main.c: 115: VRCON = 0x00;
+[e = _ADCON0 -> -> 0 `i `uc ]
+[; ;main.c: 115: CMCON = 0x07;
 "115
-[e = _VRCON -> -> 0 `i `uc ]
-[; ;main.c: 116: TRISIO = 0x08;
+[e = _CMCON -> -> 7 `i `uc ]
+[; ;main.c: 116: VRCON = 0x00;
 "116
-[e = _TRISIO -> -> 8 `i `uc ]
-[; ;main.c: 117: GPIO = 0x00;
+[e = _VRCON -> -> 0 `i `uc ]
+[; ;main.c: 117: TRISIO = 0x08;
 "117
+[e = _TRISIO -> -> 8 `i `uc ]
+[; ;main.c: 118: GPIO = 0x00;
+"118
 [e = _GPIO -> -> 0 `i `uc ]
-[; ;main.c: 119: initPWM();
+[; ;main.c: 119: DELAY_ms(500);
 "119
-[e ( _initPWM ..  ]
-[; ;main.c: 120: GP2 = 1;
+[e ( _DELAY_ms (1 -> -> 500 `i `ui ]
+[; ;main.c: 120: initPWM();
 "120
+[e ( _initPWM ..  ]
+[; ;main.c: 121: GP2 = 1;
+"121
 [e = _GP2 -> -> 1 `i `b ]
-[; ;main.c: 122: InitADC(1);
-"122
+[; ;main.c: 123: InitADC(1);
+"123
 [e ( _InitADC (1 -> -> 1 `i `uc ]
-"125
+"126
 [v _i `uc ~T0 @X0 1 a ]
-[; ;main.c: 125: unsigned char i;
-[; ;main.c: 128: PWM = 127;
-"128
-[e = _PWM -> -> 127 `i `uc ]
-[; ;main.c: 129: DELAY_ms(20);
+[; ;main.c: 126: unsigned char i;
+[; ;main.c: 129: PWM = 127;
 "129
-[e ( _DELAY_ms (1 -> -> 20 `i `ui ]
-[; ;main.c: 130: while(1)
+[e = _PWM -> -> 127 `i `uc ]
+[; ;main.c: 130: DELAY_ms(20);
 "130
-[e :U 102 ]
-[; ;main.c: 131: {
+[e ( _DELAY_ms (1 -> -> 20 `i `ui ]
+[; ;main.c: 131: StartTime = GetADCValue(1);
 "131
-{
-[; ;main.c: 132: StartTime = GetADCValue(1);
-"132
 [e = _StartTime ( _GetADCValue (1 -> -> 1 `i `uc ]
-[; ;main.c: 138: {
-"138
+[; ;main.c: 132: while(1)
+"132
+[e :U 102 ]
+[; ;main.c: 133: {
+"133
 {
-"140
+[; ;main.c: 139: {
+"139
+{
+"141
 }
-[; ;main.c: 140: }
-[; ;main.c: 161: PWM = 5;
-"161
-[e = _PWM -> -> 5 `i `uc ]
-[; ;main.c: 162: DELAY_sec(5);
+[; ;main.c: 141: }
+[; ;main.c: 162: for(i = 26; i< 50; i+= 2)
 "162
-[e ( _DELAY_sec (1 -> -> 5 `i `ui ]
-[; ;main.c: 164: PWM = 250;
-"164
-[e = _PWM -> -> 250 `i `uc ]
-[; ;main.c: 165: DELAY_sec(5);
-"165
-[e ( _DELAY_sec (1 -> -> 5 `i `ui ]
-[; ;main.c: 167: while(1);
-"167
-[e :U 105 ]
-[e :U 104 ]
+{
+[e = _i -> -> 26 `i `uc ]
+[e $ < -> _i `i -> 50 `i 104  ]
 [e $U 105  ]
-[e :U 106 ]
-"176
+"163
+[e :U 104 ]
+[; ;main.c: 163: {
+{
+[; ;main.c: 164: PWM = i;
+"164
+[e = _PWM _i ]
+[; ;main.c: 165: DELAY_sec(StartTime/150);
+"165
+[e ( _DELAY_sec (1 / _StartTime -> -> 150 `i `ui ]
+"166
+}
+"162
+[e =+ _i -> -> 2 `i `uc ]
+[e $ < -> _i `i -> 50 `i 104  ]
+[e :U 105 ]
+"166
+}
+[; ;main.c: 166: }
+[; ;main.c: 168: while(1);
+"168
+[e :U 108 ]
+[e :U 107 ]
+[e $U 108  ]
+[e :U 109 ]
+"177
 }
 [e :U 101 ]
-"130
+"132
 [e $U 102  ]
 [e :U 103 ]
-[; ;main.c: 176: }
 [; ;main.c: 177: }
-"177
+[; ;main.c: 178: }
+"178
 [e :UE 100 ]
 }

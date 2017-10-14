@@ -868,14 +868,14 @@ void DELAY_us(uint16_t us_count);
 void DELAY_ms(uint16_t ms_count);
 void DELAY_sec(uint16_t var_delaySecCount_u16);
 
-# 17 "main.c"
+# 18 "main.c"
 unsigned char PWM = 0;
 unsigned char cycle = 0;
 unsigned int ADC = 0;
 unsigned int StartTime;
 
 
-#pragma config FOSC = XT
+#pragma config FOSC = INTOSCCLK
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
@@ -900,7 +900,7 @@ CMCON = 0x07;
 VRCON = 0x00;
 }
 
-# 57
+# 58
 unsigned int GetADCValue(unsigned char Channel)
 {
 ADCON0 &= 0xf3;
@@ -931,7 +931,7 @@ if(T0IF)
 {
 if(GP0)
 {
-TMR0 = 255 - PWM;
+TMR0 = PWM;
 if(cycle == 1)
 {
 GP0 = 0;
@@ -940,8 +940,8 @@ cycle = 0;
 }
 else
 {
-TMR0 = PWM;
-if(cycle == 5)
+TMR0 = 255 - PWM;
+if(cycle == 1)
 {
 GP0 = 1;
 cycle = 0;
@@ -962,7 +962,7 @@ CMCON = 0x07;
 VRCON = 0x00;
 TRISIO = 0x08;
 GPIO = 0x00;
-
+DELAY_ms(500);
 initPWM();
 GP2 = 1;
 
@@ -974,24 +974,24 @@ unsigned char i;
 
 PWM = 127;
 DELAY_ms(20);
+StartTime = GetADCValue(1);
 while(1)
 {
-StartTime = GetADCValue(1);
 
-# 138
+# 139
 {
 
 }
 
-# 161
-PWM = 5;
-DELAY_sec(5);
-
-PWM = 250;
-DELAY_sec(5);
+# 162
+for(i = 26; i< 50; i+= 2)
+{
+PWM = i;
+DELAY_sec(StartTime/150);
+}
 
 while(1);
 
-# 176
+# 177
 }
 }

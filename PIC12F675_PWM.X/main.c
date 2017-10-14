@@ -13,6 +13,7 @@
 #define PWM_Pin    GP0
 #define _XTAL_FREQ   8000000  
 #define PWM_CYCLE   5  
+#define TIME_RATIO 150
 
 unsigned char PWM = 0;
 unsigned char cycle = 0;
@@ -20,7 +21,7 @@ unsigned int ADC = 0;
 unsigned int StartTime;
 
 // CONFIG
-#pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN)
+#pragma config FOSC = INTOSCCLK        // Oscillator Selection bits (XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
 #pragma config PWRTE = OFF      // Power-Up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // GP3/MCLR pin function select (GP3/MCLR pin function is digital I/O, MCLR internally tied to VDD)
@@ -84,7 +85,7 @@ void interrupt ISR(void)
     {
         if(PWM_Pin) // if pin pwm is high
         {
-            TMR0 = 255 - PWM;
+            TMR0 = PWM;
             if(cycle == 1)
             {
                 PWM_Pin = 0;
@@ -93,8 +94,8 @@ void interrupt ISR(void)
         }
         else
         {
-            TMR0 = PWM;
-            if(cycle == PWM_CYCLE)
+            TMR0 = 255 - PWM;
+            if(cycle == 1)
             {
                 PWM_Pin = 1;
                 cycle = 0;
@@ -115,7 +116,7 @@ void main()
 	VRCON  = 0x00;	     // Shut off the Voltage Reference
 	TRISIO = 0x08;       // GP3 input, rest all output
 	GPIO   = 0x00;       // Make all pins 0
-	
+    DELAY_ms(500);	
 	initPWM();			 // Initialize PWM
     GP2 = 1;
     
@@ -127,9 +128,9 @@ void main()
 	// PWM=255 means 100% duty cycle
 	PWM = 127;			 // 50% duty cycle 
 	DELAY_ms(20);
+    StartTime = GetADCValue(1);
 	while(1)
 	{
-        StartTime = GetADCValue(1);
 //        if(ADC)
 //        {
 //            PWM = (unsigned char) ADC & 0xFF;
@@ -158,11 +159,11 @@ void main()
 //            PWM = i*10;
 //            DELAY_sec(5);        
 //        }
-        PWM = 5;
-        DELAY_sec(5);
-        
-        PWM = 250;
-        DELAY_sec(5);
+        for(i = 26; i< 50; i+= 2)
+        {
+            PWM = i;
+            DELAY_sec(StartTime/TIME_RATIO);
+        }
         
         while(1);
 //        PWM++;
