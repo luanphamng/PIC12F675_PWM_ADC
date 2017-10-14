@@ -12,6 +12,7 @@
 
 #define PWM_Pin    GP0
 #define _XTAL_FREQ   8000000  
+#define PWM_CYCLE   15  
 
 unsigned char PWM = 0;
 unsigned char cycle = 0;
@@ -83,8 +84,8 @@ void interrupt ISR(void)
     {
         if(PWM_Pin) // if pin pwm is high
         {
-            TMR0 = PWM;
-            if(cycle == 10)
+            TMR0 = 255 - PWM;
+            if(cycle == PWM_CYCLE)
             {
                 PWM_Pin = 0;
                 cycle = 0;
@@ -92,8 +93,8 @@ void interrupt ISR(void)
         }
         else
         {
-            TMR0 = 255 - PWM;
-            if(cycle == 10)
+            TMR0 = PWM;
+            if(cycle == PWM_CYCLE)
             {
                 PWM_Pin = 1;
                 cycle = 0;
@@ -124,8 +125,8 @@ void main()
     unsigned char i;
 	// PWM=0 means 0% duty cycle and 
 	// PWM=255 means 100% duty cycle
-	PWM = 80;			 // 50% duty cycle 
-	
+	PWM = 127;			 // 50% duty cycle 
+	DELAY_ms(70);
 	while(1)
 	{
         StartTime = GetADCValue(1);
@@ -138,10 +139,10 @@ void main()
             //PWM = 1;
         }
 //        StartTime = 20;
-        for(i = 8; i < 21; i++)
+        for(i = 4; i < 15; i++)
         {
             PWM = i*10;
-            DELAY_ms(StartTime*10);
+            DELAY_ms(StartTime);
         }
         while(1);
 //        PWM++;

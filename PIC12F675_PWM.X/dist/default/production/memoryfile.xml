@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/PIC12F675_PWM.X.production.hex">
+  <executable name="dist/default/production\PIC12F675_PWM.X.production.hex">
     <memory name="program">
       <units>words</units>
       <length>2048</length>
-      <used>282</used>
-      <free>1766</free>
+      <used>245</used>
+      <free>1803</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>128</length>
-      <used>25</used>
-      <free>103</free>
+      <used>22</used>
+      <free>106</free>
     </memory>
   </executable>
 </project>
